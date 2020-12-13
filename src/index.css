@@ -95,3 +95,13 @@ h2{
 .form-group{
     margin: 3vh;
 }
+#heading1,#footer{
+    text-align: center;
+    background-color: rgb(37, 37, 37);
+    color: wheat;
+    padding: 2vh;
+}
+#footer{
+    position: absolute;
+    bottom: 0
+}

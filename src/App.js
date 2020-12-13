@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from './Header'
-import Footer from './Footer'
+import Header from './HeaderSignIn'
+import Footer from './FooterSignIn'
 import MainPage from './MainPage'
 function App(){
   return(
-    <div>
+    <div className="container-fluid">
       <Header />
       <MainPage id="MainPage"/>
       <Footer />
