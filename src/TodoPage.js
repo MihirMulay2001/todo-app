@@ -2,6 +2,7 @@ import React from 'react'
 import InputNewTodo from './InputNewToDo'
 import PendingItemsList from './PendingItemsList'
 import CompletedItemsList from './CompletedItemsList'
+import Header from './HeaderToDo'
 const {useState} = React
 
 function TodoPage({props}){
@@ -9,9 +10,10 @@ function TodoPage({props}){
     let [completedItems, setCompletedItems] = useState([])
     let [enterNewItem, setNewItem] = useState(false)
     let [defaultvalues, setdefaultvalues] = useState({task : '' , priority: ''})
-    //const { userName, userEmail, phnum, password} = props
+    const {userName} = props
     return(
-        <div className="container">
+        <div>
+            <Header name={userName}/>
             { enterNewItem === true 
                 ? 
                 <div id="input-data">
@@ -30,7 +32,7 @@ function TodoPage({props}){
                     <div id="pending-items">
                         <h2>Pending tasks</h2>
                         { pendingItems.length === 0
-                        ? <label class="no-tasks">No tasks pending</label>
+                        ? <label className="no-tasks">No tasks pending</label>
                         : <PendingItemsList 
                         pendingItems={pendingItems}
                         setPendingItems={setPendingItems}
@@ -46,7 +48,7 @@ function TodoPage({props}){
                     <div id="completed-items">
                         <h2>Completed tasks</h2>
                         { completedItems.length === 0
-                            ? <label class="no-tasks">No tasks completed</label>
+                            ? <label className="no-tasks">No tasks completed</label>
                             : <CompletedItemsList 
                             completedItems={completedItems}
                             setCompletedItems={setCompletedItems}
@@ -67,5 +69,3 @@ function TodoPage({props}){
 }
 
 export default TodoPage
-//<i class="fas fa-check"></i>
-//<i class="fas fa-times"></i>

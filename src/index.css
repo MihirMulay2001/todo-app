@@ -1,6 +1,8 @@
 body{
-    background-color: cyan;
+    background-color: rgb(241, 225, 155);
     font-size: 2vh;
+    max-height: 10vh ;
+    overflow: scroll;
 }
 #signup-page{
     border-radius: 10px;
@@ -31,13 +33,19 @@ i{
     margin-top: 2vh;
     margin-bottom: 1vh;
     border-radius: 2vh;
+    overflow: scroll;
+    max-height: 50vh;
 
 }
+#pending-items::-webkit-scrollbar , #completed-items::-webkit-scrollbar{
+    display: none;
+  }
 .list-group-item{
     padding: 1.5vh;
+    padding-left: 0;
 }
 .list-icons{
-    font-size: 2vh;
+    font-size: 1.5vh;
     padding: 0.3vh;
     margin: 1vh;
 }
@@ -46,6 +54,8 @@ i{
     background-color: grey;
     margin-top: 2vh;
     border-radius: 2vh;
+    overflow: scroll;
+    max-height: 50vh;
 }
 .finished{
     text-decoration: line-through;
@@ -70,11 +80,10 @@ h2{
 }
 #add-item{
     background-color: coral;
-    position: absolute;
-    max-width: 40vh;
+    max-width: 35vh;
     border-radius: 30vh;
     box-shadow: 10px 10px 30px;
-    bottom: 10vh;
+    margin: 5vh;
 }
 #input-data{
     position: absolute;
@@ -100,8 +109,4 @@ h2{
     background-color: rgb(37, 37, 37);
     color: wheat;
     padding: 2vh;
-}
-#footer{
-    position: absolute;
-    bottom: 0
 }

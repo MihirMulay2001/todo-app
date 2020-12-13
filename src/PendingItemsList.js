@@ -2,7 +2,6 @@ import React from 'react'
 import deleteEntry from './deleteEntry'
 
 function markasDone(idx,pendingItems, completedItems, setCompletedItems){
-    console.log(pendingItems);
     setCompletedItems([...completedItems, pendingItems[idx -1]])
 }
 
@@ -15,7 +14,6 @@ function PendingItemsList({pendingItems,setPendingItems, completedItems,setCompl
                 <div className="row">
                     <div className="col-lg-2 col-2">
                         <button className="list-icons done" onClick={()=>{
-                            console.log(index);
                             markasDone(index + 1,pendingItems, completedItems, setCompletedItems)
                             deleteEntry(index,pendingItems,setPendingItems)
                         }}>
@@ -23,7 +21,7 @@ function PendingItemsList({pendingItems,setPendingItems, completedItems,setCompl
                         </button>
                     </div>
                     <div className="col-lg-6 col-6">
-                        <h5>{ele.task.toUpperCase()}</h5>{ele.priority}
+                        <h6>{ele.task.toUpperCase()}</h6>{ele.priority}
                     </div>
                     <div className="col-lg-2 col-2">
                         <button className="list-icons edit" onClick={()=>{

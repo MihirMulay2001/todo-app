@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {BrowserRouter as Router,Route, Switch} from 'react-router-dom'
 import SignupPage from './SignupPage'
 import TodoPage from './TodoPage'
-
+import Header from './HeaderSignIn'
 class MainPage extends Component{
   constructor(){
     super()
@@ -31,6 +31,7 @@ class MainPage extends Component{
                 <Switch>
                 <Route exact path='/'>
                     <div className="row justify-content-center">
+                        <Header />
                         <div className=" col-lg-5 col-12" id="signup-page">
                             <SignupPage props={{ userName, userEmail, phnum, password}} func={this.handleChange} />
                         </div>
@@ -47,7 +48,6 @@ class MainPage extends Component{
         </div>
     )
   }
-  
 }
 
 export default MainPage;
