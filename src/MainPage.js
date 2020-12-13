@@ -27,7 +27,7 @@ class MainPage extends Component{
     let { userName, userEmail, phnum, password} = this.state
     return(
         <div className="container">
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
                 <Route exact path='/'>
                     <div className="row justify-content-center">
